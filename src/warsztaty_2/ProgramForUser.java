@@ -15,7 +15,7 @@ public class ProgramForUser {
         int[] idsOfAllUsers = new int[0];
 
         for (Users us : allUsers) {
-            ArrayUtils.add(idsOfAllUsers, us.getId());
+            idsOfAllUsers = ArrayUtils.add(idsOfAllUsers, us.getId());
         }
 
         System.out.println("Witaj użytkowniku. Podaj swój numer.");
@@ -71,7 +71,7 @@ public class ProgramForUser {
 
             for (Exercise exe : allExercises) {
                 System.out.println(exe);
-                ArrayUtils.add(idsOfExerciseWithoutSolution, exe.getId());
+                idsOfExerciseWithoutSolution = ArrayUtils.add(idsOfExerciseWithoutSolution, exe.getId());
             }
 
             System.out.println("Podaj numer zadania do którego chcesz dodać rozwiązanie.");
@@ -96,8 +96,6 @@ public class ProgramForUser {
 
             solutionDAO.createSolution(createsolution);
 
-            scan.close();
-
             programForUser(id);
 
         } else if (answer.equals("view")) {
@@ -110,14 +108,14 @@ public class ProgramForUser {
                 System.out.println(sol);
             }
 
-            scan.close();
 
             programForUser(id);
 
         } else if (answer.equals("quit")) {
             System.out.println("Do zobaczenia.");
-            scan.close();
         }
+
+        scan.close();
 
     }
 

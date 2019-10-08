@@ -25,7 +25,7 @@ public class SolutionDAO {
 
             preparedStatement.setString(1, solution.getDescription());
             preparedStatement.setInt(2, solution.getExercise().getId());
-            preparedStatement.setInt(3, solution.getExercise().getId());
+            preparedStatement.setInt(3, solution.getUser().getId());
 
             preparedStatement.executeUpdate();
 
