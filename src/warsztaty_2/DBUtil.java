@@ -9,7 +9,7 @@ public class DBUtil {
 
     private static final String DB_USER = "root";
 
-    private static final String DB_PASS = "coderslab";
+    private static final String DB_PASS = "jurnyzbyszek";
 
 
     public static Connection getConnection() throws SQLException {

@@ -45,7 +45,6 @@ public class GroupManagement {
 
             groupDAO.createGroup(newgroup);
 
-            scan.close();
 
             groupManagement();
 
@@ -69,7 +68,6 @@ public class GroupManagement {
 
             groupDAO.createGroup(editgroup);
 
-            scan.close();
 
             groupManagement();
 
@@ -87,14 +85,15 @@ public class GroupManagement {
 
             groupDAO.deleteGroupById(idInt);
 
-            scan.close();
 
             groupManagement();
 
         } else if (answer.equals("quit")) {
             System.out.println("Do zobaczenia.");
-            scan.close();
+
         }
+
+        scan.close();
     }
 
     static boolean isNotPositiveNumber(String str) {

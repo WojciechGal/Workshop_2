@@ -72,7 +72,6 @@ public class SolutionToUserAndExerciseManagement {
 
             solutionDAO.createSolution(solution);
 
-            scan.close();
 
             solutionToUserAndExerciseManagement();
 
@@ -96,14 +95,14 @@ public class SolutionToUserAndExerciseManagement {
                 System.out.println(sol);
             }
 
-            scan.close();
 
             solutionToUserAndExerciseManagement();
 
         } else if (answer.equals("quit")) {
             System.out.println("Do zobaczenia.");
-            scan.close();
         }
+
+        scan.close();
     }
 
     static boolean isNotPositiveNumber(String str) {

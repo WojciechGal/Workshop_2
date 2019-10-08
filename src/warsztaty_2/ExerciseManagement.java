@@ -47,7 +47,6 @@ public class ExerciseManagement {
 
             exerciseDAO.createExercise(newexercise);
 
-            scan.close();
 
             exerciseManagement();
 
@@ -73,7 +72,6 @@ public class ExerciseManagement {
 
             exerciseDAO.updateExercise(editexercise);
 
-            scan.close();
 
             exerciseManagement();
 
@@ -91,14 +89,14 @@ public class ExerciseManagement {
 
             exerciseDAO.deleteExerciseById(idInt);
 
-            scan.close();
 
             exerciseManagement();
 
         } else if (answer.equals("quit")) {
             System.out.println("Do zobaczenia.");
-            scan.close();
         }
+
+        scan.close();
     }
 
     static boolean isNotPositiveNumber(String str) {

@@ -61,7 +61,7 @@ public class UserManagement {
 
             usersDAO.createUser(newuser);
 
-            scan.close();
+
 
             userManagement();
 
@@ -101,7 +101,7 @@ public class UserManagement {
 
             usersDAO.updateUser(edituser);
 
-            scan.close();
+
 
             userManagement();
 
@@ -119,14 +119,14 @@ public class UserManagement {
 
             usersDAO.deleteUserById(idInt);
 
-            scan.close();
 
             userManagement();
 
         } else if (answer.equals("quit")) {
             System.out.println("Do zobaczenia.");
-            scan.close();
         }
+
+        scan.close();
     }
 
     static boolean isNotPositiveNumber(String str) {
